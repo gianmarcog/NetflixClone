@@ -13,6 +13,7 @@
 		916D36EE2509A67A0053F20C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916D36ED2509A67A0053F20C /* Preview Assets.xcassets */; };
 		916D36F92509A67A0053F20C /* NetflixCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916D36F82509A67A0053F20C /* NetflixCloneTests.swift */; };
 		916D37042509A67A0053F20C /* NetflixCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916D37032509A67A0053F20C /* NetflixCloneUITests.swift */; };
+		916D37122509A6CF0053F20C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916D37112509A6CF0053F20C /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		916D36FF2509A67A0053F20C /* NetflixCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetflixCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		916D37032509A67A0053F20C /* NetflixCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixCloneUITests.swift; sourceTree = "<group>"; };
 		916D37052509A67A0053F20C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		916D37112509A6CF0053F20C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				916D36EA2509A67A0053F20C /* Assets.xcassets */,
 				916D36EF2509A67A0053F20C /* Info.plist */,
 				916D36EC2509A67A0053F20C /* Preview Content */,
+				916D37112509A6CF0053F20C /* HomeView.swift */,
 			);
 			path = NetflixClone;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				916D37122509A6CF0053F20C /* HomeView.swift in Sources */,
 				916D36E92509A6780053F20C /* ContentView.swift in Sources */,
 				916D36E72509A6780053F20C /* NetflixCloneApp.swift in Sources */,
 			);
