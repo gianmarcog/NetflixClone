@@ -49,7 +49,7 @@ struct TopMoviePreview: View {
                             }
                         }
                     }
-                }
+                }.padding(.bottom,10)
                 HStack {
                     Spacer()
                     
@@ -72,6 +72,11 @@ struct TopMoviePreview: View {
                     Spacer()
                 }
             }
+            .background(
+                LinearGradient
+.blackOpacityGradient
+                    .padding(.top, 350)
+                )
         }
         .foregroundColor(.white)
     }
@@ -79,6 +84,6 @@ struct TopMoviePreview: View {
 
 struct TopMoviePreview_Previews: PreviewProvider {
     static var previews: some View {
-        TopMoviePreview(movie: exampleMovie6)
+        TopMoviePreview(movie: exampleMovie3)
     }
 }
