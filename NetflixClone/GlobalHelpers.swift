@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 //static information | Befinden sich die Daten, welche über Movie.swift aufgerufen werden.
 
@@ -17,3 +18,12 @@ let exampleMovie5 = Movie(id: UUID().uuidString, name: "Hanniball", thumbnailURL
 let exampleMovie6 = Movie(id: UUID().uuidString, name: "After Life", thumbnailURL: URL(string: "https://picsum.photos/200/305")!,categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"] )
 
 let exampleMovies: [Movie] = [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6]
+
+
+extension LinearGradient {
+    static let blackOpacityGradient =  LinearGradient(
+        gradient: Gradient(colors: [Color.black.opacity(0.0),
+            Color.black.opacity(0.9)]),
+        startPoint: .top,
+        endPoint: .bottom)
+}
