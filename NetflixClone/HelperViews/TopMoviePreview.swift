@@ -72,6 +72,7 @@ struct TopMoviePreview: View {
                     Spacer()
                 }
             }
+            // Ist für die Trübung Bilder zuständig
             .background(
                 LinearGradient
 .blackOpacityGradient
