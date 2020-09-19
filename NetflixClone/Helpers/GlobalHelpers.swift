@@ -29,6 +29,56 @@ let exampleTrailer3 = Trailer(name: "The Mysterious", videoURL: exampleVideoURL,
 
 let exampleTrailers = [exampleTrailer1, exampleTrailer2, exampleTrailer3]
 
+let episode1 = Episode(name: "Beginnings and Ending",
+                       season: 1,
+                       episodeNumber: 1,
+                       thumbnailImageURLString: "https://picsum.photos/300/111",
+                       description: "This is the description of the first episode. Hogwarts Legacy is awesome.",
+                       length: 53,
+                       videoURL: exampleVideoURL)
+
+let episode2 = Episode(name: "Beginnings and Ending",
+                       season: 1,
+                       episodeNumber: 1,
+                       thumbnailImageURLString: "https://picsum.photos/300/112",
+                       description: "This is the description of the second episode. Hogwarts Legacy is awesome.",
+                       length: 54,
+                       videoURL: exampleVideoURL)
+
+let episode3 = Episode(name: "Beginnings and Ending",
+                       season: 1,
+                       episodeNumber: 1,
+                       thumbnailImageURLString: "https://picsum.photos/300/113",
+                       description: "This is the description of the third episode. Hogwarts Legacy is awesome.",
+                       length: 56,
+                       videoURL: exampleVideoURL)
+
+let episode4 = Episode(name: "Beginnings and Ending",
+                       season: 1,
+                       episodeNumber: 1,
+                       thumbnailImageURLString: "https://picsum.photos/300/114",
+                       description: "This is the description of the third episode. Hogwarts Legacy is awesome.",
+                       length: 56,
+                       videoURL: exampleVideoURL)
+
+let episode5 = Episode(name: "Beginnings and Ending",
+                       season: 2,
+                       episodeNumber: 1,
+                       thumbnailImageURLString: "https://picsum.photos/300/115",
+                       description: "This is the description of the third episode. Hogwarts Legacy is awesome.",
+                       length: 56,
+                       videoURL: exampleVideoURL)
+
+let episode6 = Episode(name: "Beginnings and Ending",
+                       season: 2,
+                       episodeNumber: 1,
+                       thumbnailImageURLString: "https://picsum.photos/300/116",
+                       description: "This is the description of the third episode. Hogwarts Legacy is awesome.",
+                       length: 56,
+                       videoURL: exampleVideoURL)
+
+var allExampleEpisodes = [episode1, episode2, episode3, episode4, episode5, episode5, episode6]
+
 let exampleMovie1 = Movie(
     id: UUID().uuidString,
     name: "DARK",
