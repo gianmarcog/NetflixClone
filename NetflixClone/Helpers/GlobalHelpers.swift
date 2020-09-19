@@ -10,6 +10,25 @@ import SwiftUI
 
 //static information | Befinden sich die Daten, welche über Movie.swift aufgerufen werden.
 
+let exampleVideoURL = URL(string:
+    "https://www.radiantmediaplayer.com/media/big-buck-bunny-360.mp4")!
+
+let exampleImageURL = URL(string: "https://picsum.photos/300/101")!
+let exampleImageURL2 = URL(string: "https://picsum.photos/300/102")!
+let exampleImageURL3 = URL(string: "https://picsum.photos/300/103")!
+
+var randomExampleURL: URL {
+    return [exampleImageURL, exampleImageURL2, exampleImageURL3].randomElement() ?? exampleImageURL
+}
+
+let exampleTrailer1 = Trailer(name: "Season3 Trailer", videoURL: exampleVideoURL, thumbnailImageURL: exampleImageURL)
+
+let exampleTrailer2 = Trailer(name: "The Heroe's Journey", videoURL: exampleVideoURL, thumbnailImageURL: exampleImageURL2)
+
+let exampleTrailer3 = Trailer(name: "The Mysterious", videoURL: exampleVideoURL, thumbnailImageURL: exampleImageURL3)
+
+let exampleTrailers = [exampleTrailer1, exampleTrailer2, exampleTrailer3]
+
 let exampleMovie1 = Movie(
     id: UUID().uuidString,
     name: "DARK",
@@ -20,7 +39,9 @@ let exampleMovie1 = Movie(
     numberOfSeasons: 1,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baron bo Odan, Jantje Friese",
-    cast: "Louis Hofmann, Oliver Masucci, jordis Triebel")
+    cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
+    moreLikeThisMovies: [exampleMovie2,exampleMovie3,exampleMovie4,exampleMovie5,exampleMovie6,exampleMovie7],
+    trailers: exampleTrailers)
 
 let exampleMovie2 = Movie(
     id: UUID().uuidString,
@@ -33,7 +54,9 @@ let exampleMovie2 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baron bo Odan, Jantje Friese",
     cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
-    promotionHeadline: "Best Rated Show")
+    moreLikeThisMovies: [],
+    promotionHeadline: "Best Rated Show",
+    trailers: exampleTrailers)
 
 let exampleMovie3 = Movie(
     id: UUID().uuidString,
@@ -45,7 +68,9 @@ let exampleMovie3 = Movie(
     numberOfSeasons: 3,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baron bo Odan, Jantje Friese",
-    cast: "Louis Hofmann, Oliver Masucci, jordis Triebel")
+    cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
+    moreLikeThisMovies: [],
+    trailers: exampleTrailers)
 
 let exampleMovie4 = Movie(
     id: UUID().uuidString,
@@ -58,7 +83,9 @@ let exampleMovie4 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baron bo Odan, Jantje Friese",
     cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
-    promotionHeadline: "New Episodes coming soon")
+    moreLikeThisMovies: [],
+    promotionHeadline: "New Episodes coming soon",
+    trailers: exampleTrailers)
 
 let exampleMovie5 = Movie(
     id: UUID().uuidString,
@@ -70,7 +97,9 @@ let exampleMovie5 = Movie(
     numberOfSeasons: 5,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baron bo Odan, Jantje Friese",
-    cast: "Louis Hofmann, Oliver Masucci, jordis Triebel")
+    cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
+    moreLikeThisMovies: [],
+    trailers: exampleTrailers)
 
 let exampleMovie6 = Movie(
     id: UUID().uuidString,
@@ -83,9 +112,28 @@ let exampleMovie6 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baron bo Odan, Jantje Friese",
     cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
-    promotionHeadline: "Watch Season 6 Now")
+    moreLikeThisMovies: [],
+    promotionHeadline: "Watch Season 6 Now",
+    trailers: exampleTrailers)
 
-let exampleMovies: [Movie] = [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6]
+let exampleMovie7 = Movie(
+    id: UUID().uuidString,
+    name: "After Life",
+    thumbnailURL: URL(string: "https://picsum.photos/200/305")!,
+    categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
+    year: 2020,
+    rating: "TV-MA",
+    numberOfSeasons: 6,
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "Baron bo Odan, Jantje Friese",
+    cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
+    moreLikeThisMovies: [],
+    promotionHeadline: "Watch Season 6 Now",
+    trailers: exampleTrailers)
+
+var exampleMovies: [Movie] {
+    [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6].shuffled()
+}
 
 let exampleEpisodeInfo1 = CurrentEpisodeInfo(episodeName: "Welcome to Miami", description: "This is the dafault text which is going to show, if this episode has no informationen. So when you gonna see this the series is realy bad. Otherhwise their would be a description.", season: 2, episode: 1)
 
