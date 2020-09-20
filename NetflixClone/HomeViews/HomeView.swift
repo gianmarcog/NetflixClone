@@ -13,6 +13,11 @@ struct HomeView: View {
     // Gibt die Grenzen des iOS-Geräts zurück
     let screen = UIScreen.main.bounds
     
+    @State private var movieDetailToShow: Movie? = nil
+    
+    @State private var topRowSelection: HomeTopRow = .home
+    @State private var homeGenre: HomeGenre = .AllGenres
+    
     
     var body: some View {
         ZStack {
@@ -23,7 +28,7 @@ struct HomeView: View {
             ScrollView(showsIndicators: false) {
                 LazyVStack {
                     
-                    TopRowButtons()
+                    TopRowButtons(topRowSelection: $topRowSelection, homeGenre: $homeGenre)
                     
                     // Anzeige von TopMoviePreview für die View
                     TopMoviePreview(movie: exampleMovie3)
@@ -45,17 +50,24 @@ struct HomeView: View {
                             // Damit Filme einer Kategorie horizontal gewischt werden können
                             ScrollView(.horizontal, showsIndicators: false){
                                 LazyHStack {
-                                    ForEach(vm.getMovie(forCat: category)) {
-                                        movie in
+                                    ForEach(vm.getMovie(forCat: category)) { movie in
                                         StandardHomeMovie(movie: movie)
                                             .frame(width: 100, height: 200)
                                             .padding(.horizontal, 30)
+                                            .onTapGesture(perform: {
+                                                movieDetailToShow = movie
+                                            })
                                     }
                                 }
                             }
                         }
                     }
                 }
+            }
+            if movieDetailToShow != nil {
+                MovieDetail(movie: movieDetailToShow!, movieDetailToShow: $movieDetailToShow)
+                    .animation(.easeInOut)
+                    .transition(.opacity)
             }
         }
         .foregroundColor(.white)
@@ -69,6 +81,10 @@ struct HomeView_Previews: PreviewProvider {
 }
 
 struct TopRowButtons: View {
+    
+    @Binding var topRowSelection: HomeTopRow
+    @Binding var homeGenre: HomeGenre
+    
     var body: some View {
         HStack{
             Button(action: {
@@ -111,4 +127,19 @@ struct TopRowButtons: View {
         .padding(.leading, 10)
         .padding(.trailing, 20)
     }
+}
+
+enum HomeTopRow: String, CaseIterable {
+    case home = "Home"
+    case tvShows = "TV Shows"
+    case movies = "Movies"
+    case myList = "My List"
+}
+
+enum HomeGenre {
+    case AllGenres
+    case Action
+    case Comedy
+    case Horror
+    case Thriller
 }
