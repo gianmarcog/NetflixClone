@@ -37,7 +37,7 @@ let episode1 = Episode(name: "Beginnings and Ending",
                        length: 53,
                        videoURL: exampleVideoURL)
 
-let episode2 = Episode(name: "Beginnings and Ending",
+let episode2 = Episode(name: "Cool",
                        season: 1,
                        episodeNumber: 1,
                        thumbnailImageURLString: "https://picsum.photos/300/112",
@@ -45,7 +45,7 @@ let episode2 = Episode(name: "Beginnings and Ending",
                        length: 54,
                        videoURL: exampleVideoURL)
 
-let episode3 = Episode(name: "Beginnings and Ending",
+let episode3 = Episode(name: "Monster Energy",
                        season: 1,
                        episodeNumber: 1,
                        thumbnailImageURLString: "https://picsum.photos/300/113",
@@ -53,7 +53,7 @@ let episode3 = Episode(name: "Beginnings and Ending",
                        length: 56,
                        videoURL: exampleVideoURL)
 
-let episode4 = Episode(name: "Beginnings and Ending",
+let episode4 = Episode(name: "iOS 14",
                        season: 1,
                        episodeNumber: 1,
                        thumbnailImageURLString: "https://picsum.photos/300/114",
@@ -61,7 +61,7 @@ let episode4 = Episode(name: "Beginnings and Ending",
                        length: 56,
                        videoURL: exampleVideoURL)
 
-let episode5 = Episode(name: "Beginnings and Ending",
+let episode5 = Episode(name: "I don't know",
                        season: 2,
                        episodeNumber: 1,
                        thumbnailImageURLString: "https://picsum.photos/300/115",
@@ -69,8 +69,8 @@ let episode5 = Episode(name: "Beginnings and Ending",
                        length: 56,
                        videoURL: exampleVideoURL)
 
-let episode6 = Episode(name: "Beginnings and Ending",
-                       season: 2,
+let episode6 = Episode(name: "That's cool",
+                       season: 3,
                        episodeNumber: 1,
                        thumbnailImageURLString: "https://picsum.photos/300/116",
                        description: "This is the description of the third episode. Hogwarts Legacy is awesome.",
@@ -86,11 +86,12 @@ let exampleMovie1 = Movie(
     categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
     year: 2020,
     rating: "TV-MA",
-    numberOfSeasons: 1,
+    numberOfSeasons: 2,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baron bo Odan, Jantje Friese",
     cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
     moreLikeThisMovies: [exampleMovie2,exampleMovie3,exampleMovie4,exampleMovie5,exampleMovie6,exampleMovie7],
+    episodes: allExampleEpisodes,
     trailers: exampleTrailers)
 
 let exampleMovie2 = Movie(
