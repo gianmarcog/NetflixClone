@@ -19,8 +19,18 @@ class HomeVM: ObservableObject {
         return movies.keys.map({ String($0) })
     }
     // Wird aufgerrufen, wenn der übergebene String-Wert sich im [Movie]-Array befindet
-    public func getMovie(forCat cat: String) -> [Movie] {
-        return movies[cat] ?? []
+    public func getMovie(forCat cat: String, andHomeRow homeRow: HomeTopRow) -> [Movie] {
+        
+        switch homeRow {
+        case .home:
+            return movies[cat] ?? []
+        case .movies:
+            return (movies[cat] ?? []).filter({ $0.movieType == .movie})
+        case .tvShows:
+            return (movies[cat] ?? []).filter({ $0.movieType == .tvShow})
+        case .myList:
+            return movies[cat] ?? []
+        }
     }
     
     init() {
