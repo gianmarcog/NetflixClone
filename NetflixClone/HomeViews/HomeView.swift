@@ -39,13 +39,91 @@ struct HomeView: View {
                         .padding(.top, -110)
                         .zIndex(-1)
                     
-                    HomeStack(vm: vm, topRowSelection: topRowSelection, movieDetailToShow: $movieDetailToShow)
+                    HomeStack(vm: vm, topRowSelection: topRowSelection, selectedGenre: homeGenre, movieDetailToShow: $movieDetailToShow)
                 }
             }
             if movieDetailToShow != nil {
                 MovieDetail(movie: movieDetailToShow!, movieDetailToShow: $movieDetailToShow)
                     .animation(.easeInOut)
                     .transition(.opacity)
+            }
+            
+            if  showTopRowSelection {
+                Group {
+                    Color.black.opacity(0.9)
+                    
+                    VStack (spacing: 40) {
+                        
+                        Spacer()
+                        
+                        ForEach(HomeTopRow.allCases, id: \.self) { topRow in
+                            
+                            Button(action: {
+                                topRowSelection = topRow
+                                showTopRowSelection  = false
+                            }, label: {
+                                if topRow == topRowSelection {
+                                    Text("\(topRow.rawValue)")
+                                } else {
+                                    Text("\(topRow.rawValue)")
+                                        .foregroundColor(.gray)
+                                }
+                            })
+                            .padding(.bottom, 30)
+                        }
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            showTopRowSelection =  false
+                        }, label: {
+                            Image(systemName: "x.circle.fill")
+                                .font(.system(size: 40))
+                        })
+                    }
+                }
+                .edgesIgnoringSafeArea(.all)
+                .font(.title2)
+            }
+            
+            if  showGenreSelection {
+                Group {
+                    Color.black.opacity(0.9)
+                    
+                    VStack (spacing: 40) {
+                        
+                        Spacer()
+                        
+                        ScrollView {
+                        ForEach(vm.allGenre, id: \.self) { genre in
+                            
+                            Button(action: {
+                                homeGenre = genre
+                                showGenreSelection = false
+                            }, label: {
+                                if genre == homeGenre {
+                                    Text("\(genre.rawValue)")
+                                } else {
+                                    Text("\(genre.rawValue)")
+                                        .foregroundColor(.gray)
+                                }
+                            })
+                            .padding(.bottom, 30)
+                        }
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            showGenreSelection =  false
+                        }, label: {
+                            Image(systemName: "x.circle.fill")
+                                .font(.system(size: 40))
+                        })
+                    }
+                    }
+                }
+                .edgesIgnoringSafeArea(.all)
+                .font(.title2)
             }
         }
         .foregroundColor(.white)
