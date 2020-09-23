@@ -50,6 +50,7 @@ struct TopMoviePreview: View {
                         }
                     }
                 }.padding(.bottom,10)
+                
                 HStack {
                     Spacer()
                     
@@ -71,6 +72,7 @@ struct TopMoviePreview: View {
                     })
                     Spacer()
                 }
+                .padding(.vertical,  10)
             }
             // Ist für die Trübung Bilder zuständig
             .background(
