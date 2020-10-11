@@ -16,6 +16,7 @@
 		911C17EC25158CB00057AF04 /* TrailerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911C17EB25158CB00057AF04 /* TrailerList.swift */; };
 		911C17EE251594330057AF04 /* CustomeTabSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911C17ED251594330057AF04 /* CustomeTabSwitcher.swift */; };
 		911C17F025164E940057AF04 /* EpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911C17EF25164E930057AF04 /* EpisodesView.swift */; };
+		912D4AE12531CF8100FC1DF7 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912D4AE02531CF8100FC1DF7 /* ActivityIndicator.swift */; };
 		912E49752519158700CF33E4 /* HomeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E49742519158600CF33E4 /* HomeStack.swift */; };
 		912E4977251A98D300CF33E4 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E4976251A98D300CF33E4 /* SearchBar.swift */; };
 		912E497A251A9CD000CF33E4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912E4979251A9CD000CF33E4 /* Colors.swift */; };
@@ -63,6 +64,7 @@
 		911C17EB25158CB00057AF04 /* TrailerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerList.swift; sourceTree = "<group>"; };
 		911C17ED251594330057AF04 /* CustomeTabSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeTabSwitcher.swift; sourceTree = "<group>"; };
 		911C17EF25164E930057AF04 /* EpisodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesView.swift; sourceTree = "<group>"; };
+		912D4AE02531CF8100FC1DF7 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		912E49742519158600CF33E4 /* HomeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStack.swift; sourceTree = "<group>"; };
 		912E4976251A98D300CF33E4 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		912E4979251A9CD000CF33E4 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			children = (
 				916D371C250A587B0053F20C /* GlobalHelpers.swift */,
 				912E4979251A9CD000CF33E4 /* Colors.swift */,
+				912D4AE02531CF8100FC1DF7 /* ActivityIndicator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				916D371B2509A95D0053F20C /* StandardHomeMovie.swift in Sources */,
 				91A157F8250EDC810065E61E /* TopMoviePreview.swift in Sources */,
 				916D37172509A8580053F20C /* Movie.swift in Sources */,
+				912D4AE12531CF8100FC1DF7 /* ActivityIndicator.swift in Sources */,
 				916D36E72509A6780053F20C /* NetflixCloneApp.swift in Sources */,
 				911C17E32514F8A20057AF04 /* MoreLikeThis.swift in Sources */,
 				912E49752519158700CF33E4 /* HomeStack.swift in Sources */,
