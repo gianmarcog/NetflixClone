@@ -92,7 +92,9 @@ let exampleMovie1 = Movie(
     cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
     moreLikeThisMovies: [exampleMovie2,exampleMovie3,exampleMovie4,exampleMovie5,exampleMovie6,exampleMovie7],
     episodes: allExampleEpisodes,
-    trailers: exampleTrailers)
+    trailers: exampleTrailers,
+    previewImageName: "darkPreview",
+    previewVideoURL: exampleVideoURL)
 
 let exampleMovie2 = Movie(
     id: UUID().uuidString,
@@ -107,7 +109,9 @@ let exampleMovie2 = Movie(
     cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
     moreLikeThisMovies: [],
     promotionHeadline: "Best Rated Show",
-    trailers: exampleTrailers)
+    trailers: exampleTrailers,
+    previewImageName: "ozarkPreview",
+    previewVideoURL: exampleVideoURL)
 
 let exampleMovie3 = Movie(
     id: UUID().uuidString,
@@ -121,7 +125,9 @@ let exampleMovie3 = Movie(
     creators: "Baron bo Odan, Jantje Friese",
     cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
     moreLikeThisMovies: [],
-    trailers: exampleTrailers)
+    trailers: exampleTrailers,
+    previewImageName: "dirtyJohnPreview",
+    previewVideoURL: exampleVideoURL)
 
 let exampleMovie4 = Movie(
     id: UUID().uuidString,
@@ -136,7 +142,9 @@ let exampleMovie4 = Movie(
     cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
     moreLikeThisMovies: [],
     promotionHeadline: "New Episodes coming soon",
-    trailers: exampleTrailers)
+    trailers: exampleTrailers,
+    previewImageName: "travelersPreview",
+    previewVideoURL: exampleVideoURL)
 
 let exampleMovie5 = Movie(
     id: UUID().uuidString,
@@ -150,7 +158,9 @@ let exampleMovie5 = Movie(
     creators: "Baron bo Odan, Jantje Friese",
     cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
     moreLikeThisMovies: [],
-    trailers: exampleTrailers)
+    trailers: exampleTrailers,
+    previewImageName: "arrestedDevPreview",
+    previewVideoURL: exampleVideoURL)
 
 let exampleMovie6 = Movie(
     id: UUID().uuidString,
@@ -165,7 +175,9 @@ let exampleMovie6 = Movie(
     cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
     moreLikeThisMovies: [],
     promotionHeadline: "Watch Season 6 Now",
-    trailers: exampleTrailers)
+    trailers: exampleTrailers,
+    previewImageName: "whiteLinesPreview",
+    previewVideoURL: exampleVideoURL)
 
 let exampleMovie7 = Movie(
     id: UUID().uuidString,
@@ -180,7 +192,9 @@ let exampleMovie7 = Movie(
     cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
     moreLikeThisMovies: [],
     promotionHeadline: "Watch Season 6 Now",
-    trailers: exampleTrailers)
+    trailers: exampleTrailers,
+    previewImageName: "ozarkPreview",
+    previewVideoURL: exampleVideoURL)
 
 var exampleMovies: [Movie] {
     [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6].shuffled()
