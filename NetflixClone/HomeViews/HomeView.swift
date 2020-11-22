@@ -10,7 +10,6 @@ import SwiftUI
 struct HomeView: View {
     var vm = HomeVM()
     
-    // Gibt die Grenzen des iOS-Geräts zurück
     let screen = UIScreen.main.bounds
     
     @State private var movieDetailToShow: Movie? = nil
@@ -21,40 +20,46 @@ struct HomeView: View {
     @State private var showGenreSelection = false
     @State private var showTopRowSelection = false
     
+    @Binding var showPreviewFullscreen: Bool
+    @Binding var previewStartingIndex: Int
     
     var body: some View {
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
             
-            // mai VStack
+            // main vstack
             ScrollView(showsIndicators: false) {
                 LazyVStack {
                     
                     TopRowButtons(topRowSelection: $topRowSelection, homeGenre: $homeGenre, showGenreSelection: $showGenreSelection, showTopRowSelection: $showTopRowSelection)
                     
-                    // Anzeige von TopMoviePreview für die View
-                    TopMoviePreview(movie: exampleMovie3)
+                    TopMoviePreview(movie: exampleMovie5)
                         .frame(width: screen.width)
                         .padding(.top, -110)
                         .zIndex(-1)
                     
-                    MoviePreviewRow(movies: exampleMovies)
+                    MoviePreviewRow(
+                        movies: exampleMovies,
+                        showPreviewFullscreen: $showPreviewFullscreen,
+                        previewStartingIndex: $previewStartingIndex
+                    )
                     
                     HomeStack(vm: vm, topRowSelection: topRowSelection, selectedGenre: homeGenre, movieDetailToShow: $movieDetailToShow)
                 }
             }
+            
             if movieDetailToShow != nil {
                 MovieDetail(movie: movieDetailToShow!, movieDetailToShow: $movieDetailToShow)
-                    .animation(.easeInOut)
+                    .animation(.easeIn)
                     .transition(.opacity)
             }
             
-            if  showTopRowSelection {
+            if showTopRowSelection {
                 Group {
                     Color.black.opacity(0.9)
                     
-                    VStack (spacing: 40) {
+                    VStack(spacing: 40) {
                         
                         Spacer()
                         
@@ -62,66 +67,70 @@ struct HomeView: View {
                             
                             Button(action: {
                                 topRowSelection = topRow
-                                showTopRowSelection  = false
+                                showTopRowSelection = false
                             }, label: {
                                 if topRow == topRowSelection {
                                     Text("\(topRow.rawValue)")
+                                        .bold()
                                 } else {
                                     Text("\(topRow.rawValue)")
                                         .foregroundColor(.gray)
                                 }
                             })
-                            .padding(.bottom, 30)
                         }
                         
                         Spacer()
                         
                         Button(action: {
-                            showTopRowSelection =  false
+                            showTopRowSelection = false
                         }, label: {
-                            Image(systemName: "x.circle.fill")
+                            Image(systemName: "xmark.circle.fill")
                                 .font(.system(size: 40))
                         })
+                        .padding(.bottom, 30)
                     }
                 }
                 .edgesIgnoringSafeArea(.all)
                 .font(.title2)
             }
             
-            if  showGenreSelection {
+            if showGenreSelection {
                 Group {
                     Color.black.opacity(0.9)
                     
-                    VStack (spacing: 40) {
+                    VStack(spacing: 40) {
                         
                         Spacer()
                         
                         ScrollView {
-                        ForEach(vm.allGenre, id: \.self) { genre in
                             
-                            Button(action: {
-                                homeGenre = genre
-                                showGenreSelection = false
-                            }, label: {
-                                if genre == homeGenre {
-                                    Text("\(genre.rawValue)")
-                                } else {
-                                    Text("\(genre.rawValue)")
-                                        .foregroundColor(.gray)
-                                }
-                            })
-                            .padding(.bottom, 30)
+                            ForEach(vm.allGenre, id: \.self) { genre in
+                                
+                                Button(action: {
+                                    homeGenre = genre
+                                    showGenreSelection = false
+                                }, label: {
+                                    if genre == homeGenre {
+                                        Text("\(genre.rawValue)")
+                                            .bold()
+                                    } else {
+                                        Text("\(genre.rawValue)")
+                                            .foregroundColor(.gray)
+                                    }
+                                })
+                                .padding(.bottom, 40)
+                            }
                         }
                         
                         Spacer()
                         
                         Button(action: {
-                            showGenreSelection =  false
+                            showGenreSelection = false
                         }, label: {
-                            Image(systemName: "x.circle.fill")
+                            Image(systemName: "xmark.circle.fill")
                                 .font(.system(size: 40))
                         })
-                    }
+                        .padding(.bottom, 30)
                     }
                 }
                 .edgesIgnoringSafeArea(.all)
@@ -134,7 +143,9 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(
+            showPreviewFullscreen: .constant(false),
+            previewStartingIndex: .constant(0))
     }
 }
 
@@ -145,6 +156,7 @@ struct TopRowButtons: View {
     
     @Binding var showGenreSelection: Bool
     @Binding var showTopRowSelection: Bool
+    
     
     var body: some View {
         switch topRowSelection {
@@ -189,7 +201,7 @@ struct TopRowButtons: View {
                 })
                 .buttonStyle(PlainButtonStyle())
             }
-            .padding(.leading, 30)
+            .padding(.leading, 10)
             .padding(.trailing, 30)
             
         case .myList, .tvShows, .movies:
@@ -244,7 +256,6 @@ struct TopRowButtons: View {
     }
 }
 
-
 enum HomeTopRow: String, CaseIterable {
     case home = "Home"
     case tvShows = "TV Shows"
@@ -259,3 +270,5 @@ enum HomeGenre: String {
     case Horror
     case Thriller
 }
+
+
