@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import  SwiftUI
 
 // Model - Objects | Werden die Parameter des Movie-Model festgelegt
 struct Movie: Identifiable {
@@ -23,6 +24,8 @@ struct Movie: Identifiable {
     
     //Personalizazion
     var currentEpisode: CurrentEpisodeInfo?
+    
+    var accentColor: Color = .white
     
     
     var defaultEpisodeInfo: CurrentEpisodeInfo
