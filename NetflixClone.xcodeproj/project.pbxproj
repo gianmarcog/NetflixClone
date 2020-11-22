@@ -35,6 +35,10 @@
 		9177A73325335D3E00C97F3F /* SearchVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9177A73225335D3E00C97F3F /* SearchVM.swift */; };
 		9177A7352535C9BF00C97F3F /* GenerateMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9177A7342535C9BF00C97F3F /* GenerateMovies.swift */; };
 		9177A7372535EFCC00C97F3F /* PopularMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9177A7362535EFCC00C97F3F /* PopularMovieView.swift */; };
+		9196866025694DE200FCBC34 /* VideoPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 9196865F25694DE200FCBC34 /* VideoPlayer */; };
+		9196866525694E0600FCBC34 /* TrailerPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9196866425694E0600FCBC34 /* TrailerPlayerView.swift */; };
+		9196866A256ABD6900FCBC34 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91968669256ABD6900FCBC34 /* PreviewView.swift */; };
+		9196866F256AC57D00FCBC34 /* PreviewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9196866E256AC57D00FCBC34 /* PreviewVM.swift */; };
 		91A157F5250E61A20065E61E /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A157F4250E61A20065E61E /* HomeVM.swift */; };
 		91A157F8250EDC810065E61E /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A157F7250EDC810065E61E /* TopMoviePreview.swift */; };
 		91A157FA250EF1ED0065E61E /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A157F9250EF1ED0065E61E /* SmallVerticalButton.swift */; };
@@ -46,6 +50,7 @@
 		91B9E1EA2537C4DC000FFD1E /* ComingSoonVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B9E1E92537C4DC000FFD1E /* ComingSoonVM.swift */; };
 		91B9E1EC2537C648000FFD1E /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B9E1EB2537C648000FFD1E /* TrackableScrollView.swift */; };
 		91B9E1F02537CBFE000FFD1E /* DownloadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B9E1EF2537CBFE000FFD1E /* DownloadsView.swift */; };
+		91E2E331256B074A0067C269 /* PreviewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E2E330256B074A0067C269 /* PreviewList.swift */; };
 		91E3A35A255771C6007CF73F /* MoviePreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3A359255771C6007CF73F /* MoviePreviewCell.swift */; };
 		91F272FB255854EB006B8100 /* MoviePreviewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F272FA255854EB006B8100 /* MoviePreviewRow.swift */; };
 /* End PBXBuildFile section */
@@ -101,6 +106,9 @@
 		9177A73225335D3E00C97F3F /* SearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVM.swift; sourceTree = "<group>"; };
 		9177A7342535C9BF00C97F3F /* GenerateMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateMovies.swift; sourceTree = "<group>"; };
 		9177A7362535EFCC00C97F3F /* PopularMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieView.swift; sourceTree = "<group>"; };
+		9196866425694E0600FCBC34 /* TrailerPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailerPlayerView.swift; sourceTree = "<group>"; };
+		91968669256ABD6900FCBC34 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		9196866E256AC57D00FCBC34 /* PreviewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVM.swift; sourceTree = "<group>"; };
 		91A157F4250E61A20065E61E /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		91A157F7250EDC810065E61E /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 		91A157F9250EF1ED0065E61E /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
@@ -112,6 +120,7 @@
 		91B9E1E92537C4DC000FFD1E /* ComingSoonVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonVM.swift; sourceTree = "<group>"; };
 		91B9E1EB2537C648000FFD1E /* TrackableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollView.swift; sourceTree = "<group>"; };
 		91B9E1EF2537CBFE000FFD1E /* DownloadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsView.swift; sourceTree = "<group>"; };
+		91E2E330256B074A0067C269 /* PreviewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewList.swift; sourceTree = "<group>"; };
 		91E3A359255771C6007CF73F /* MoviePreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePreviewCell.swift; sourceTree = "<group>"; };
 		91F272FA255854EB006B8100 /* MoviePreviewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePreviewRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				916D37152509A82F0053F20C /* KingfisherSwiftUI in Frameworks */,
+				9196866025694DE200FCBC34 /* VideoPlayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +312,10 @@
 				91E3A359255771C6007CF73F /* MoviePreviewCell.swift */,
 				91F272FA255854EB006B8100 /* MoviePreviewRow.swift */,
 				91246E0D255884F300598FDD /* PagerView.swift */,
+				9196866425694E0600FCBC34 /* TrailerPlayerView.swift */,
+				91968669256ABD6900FCBC34 /* PreviewView.swift */,
+				9196866E256AC57D00FCBC34 /* PreviewVM.swift */,
+				91E2E330256B074A0067C269 /* PreviewList.swift */,
 			);
 			path = Preview;
 			sourceTree = "<group>";
@@ -324,6 +338,7 @@
 			name = NetflixClone;
 			packageProductDependencies = (
 				916D37142509A82F0053F20C /* KingfisherSwiftUI */,
+				9196865F25694DE200FCBC34 /* VideoPlayer */,
 			);
 			productName = NetflixClone;
 			productReference = 916D36E32509A6780053F20C /* NetflixClone.app */;
@@ -398,6 +413,7 @@
 			mainGroup = 916D36DA2509A6780053F20C;
 			packageReferences = (
 				916D37132509A82F0053F20C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				9196865E25694DE200FCBC34 /* XCRemoteSwiftPackageReference "VideoPlayer" */,
 			);
 			productRefGroup = 916D36E42509A6780053F20C /* Products */;
 			projectDirPath = "";
@@ -447,6 +463,7 @@
 				9177A7352535C9BF00C97F3F /* GenerateMovies.swift in Sources */,
 				9177A73325335D3E00C97F3F /* SearchVM.swift in Sources */,
 				91B9E1E625379D2B000FFD1E /* NotificationBar.swift in Sources */,
+				9196866F256AC57D00FCBC34 /* PreviewVM.swift in Sources */,
 				912E497A251A9CD000CF33E4 /* Colors.swift in Sources */,
 				91E3A35A255771C6007CF73F /* MoviePreviewCell.swift in Sources */,
 				916D371D250A587B0053F20C /* GlobalHelpers.swift in Sources */,
@@ -466,17 +483,20 @@
 				91A157F8250EDC810065E61E /* TopMoviePreview.swift in Sources */,
 				916D37172509A8580053F20C /* Movie.swift in Sources */,
 				912D4AE12531CF8100FC1DF7 /* ActivityIndicator.swift in Sources */,
+				9196866A256ABD6900FCBC34 /* PreviewView.swift in Sources */,
 				916D36E72509A6780053F20C /* NetflixCloneApp.swift in Sources */,
 				911C17E32514F8A20057AF04 /* MoreLikeThis.swift in Sources */,
 				912E49752519158700CF33E4 /* HomeStack.swift in Sources */,
 				912E4977251A98D300CF33E4 /* SearchBar.swift in Sources */,
 				91B9E1E82537AC7D000FFD1E /* ComingSoonRow.swift in Sources */,
 				911C17EC25158CB00057AF04 /* TrailerList.swift in Sources */,
+				91E2E331256B074A0067C269 /* PreviewList.swift in Sources */,
 				911C17EE251594330057AF04 /* CustomeTabSwitcher.swift in Sources */,
 				91A157FA250EF1ED0065E61E /* SmallVerticalButton.swift in Sources */,
 				91A157FC250FF1640065E61E /* PlayButton.swift in Sources */,
 				911C17E725154F6D0057AF04 /* SwiftUIVideoView.swift in Sources */,
 				911C17DB2512AE750057AF04 /* MovieDetail.swift in Sources */,
+				9196866525694E0600FCBC34 /* TrailerPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -806,6 +826,14 @@
 				minimumVersion = 5.15.0;
 			};
 		};
+		9196865E25694DE200FCBC34 /* XCRemoteSwiftPackageReference "VideoPlayer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wxxsw/VideoPlayer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -813,6 +841,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 916D37132509A82F0053F20C /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = KingfisherSwiftUI;
+		};
+		9196865F25694DE200FCBC34 /* VideoPlayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9196865E25694DE200FCBC34 /* XCRemoteSwiftPackageReference "VideoPlayer" */;
+			productName = VideoPlayer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
